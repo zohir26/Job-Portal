@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AuthContext from '../Context/AuthContext/AuthContext';
+import { signOut } from 'firebase/auth';
+import auth from '../Firebase/firebase.config';
 
 const Navbar = () => {
+   const {user}= useContext(AuthContext)
+     // logout
+     const handleLogout= ()=>{
+      signOut(auth)
+    .then(()=>{
+      alert("logout Successful")
+    }
+    )
+    .catch(error=>{
+      console.log(error)
+    })
+    } 
    const links= <>
     <div className='flex gap-8 text-2xl font-semibold'>
     <Link to='/'> <li>Home</li>  </Link>
-    <Link to='/login'> <li>Login</li>  </Link>
+    {
+      user ? <>
+       <Link > <li onClick={handleLogout}>Logout</li>  </Link>
+       <Link > <li>{user.email}</li>  </Link>
+      </>: <>
+      
+      <Link to='/login'> <li>Login</li>  </Link>
     <Link to='/register'> <li>Register</li>  </Link>
     <Link to='/'> <li>Update User</li>  </Link>
+      </>
+    }
     </div>
    </>
+
+
    return (
 <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -41,9 +66,7 @@ const Navbar = () => {
      {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
+
 </div>
     );
 };
