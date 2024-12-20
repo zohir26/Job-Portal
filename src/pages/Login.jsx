@@ -6,7 +6,7 @@ import loginAnimation from '../Animation/Login.json'
 import Lottie from "lottie-react";
 
 const Login = () => {
- const {user, loggedIn , loading, setLoading}=useContext(AuthContext)
+ const {user, loggedIn , loading, setLoading,signInWithGoogle}=useContext(AuthContext)
   const handleLogin=(event)=>{
     event.preventDefault();
     const form = event.target;
@@ -30,6 +30,9 @@ const Login = () => {
     });
   }  
   
+  const handleGoogleSignIn= ()=>{
+    signInWithGoogle()
+  }
   return (
       <>
       <Navbar></Navbar>
@@ -56,8 +59,12 @@ const Login = () => {
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control mt-6">               
                 <button className="btn btn-primary">Login</button>
+              </div>
+
+              <div className="form-control mt-6">               
+                <button onClick={handleGoogleSignIn} className="btn btn-primary">Login with google</button>
               </div>
             </form>
           </div>
