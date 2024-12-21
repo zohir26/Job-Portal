@@ -6,7 +6,7 @@ import Footer from '../../shared/Footer';
 
 const JobDetails = () => {
     const jobs= useLoaderData()
-
+   const { _id } = jobs;
     return (
     <>
     <Navbar></Navbar>
@@ -36,9 +36,9 @@ const JobDetails = () => {
           </div>
         </div>
         <div className="px-6 pb-4">
-          <Link to= "/">
+          <Link to= {`/jobApply/${_id}`}>
             <button className='btn btn-primary w-full'>
-              Home
+              Apply Now
             </button>
           </Link>
         </div>
