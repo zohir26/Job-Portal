@@ -266,8 +266,10 @@ import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import Navbar from '../../shared/Navbar';
 import Footer from '../../shared/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const AddJob = () => {
+   const navigate= useNavigate()
     const {user}= useAuth()
     const [formData, setFormData] = useState({
         title: '',
@@ -329,6 +331,7 @@ const AddJob = () => {
                     timer: 1500
                   });
             }
+            navigate('/myPostedJobs')
         })
 
         console.log('Processed Form Data:', processedData);

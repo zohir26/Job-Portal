@@ -8,11 +8,13 @@ const MyApplications = () => {
   const {user}= useAuth();
   const [jobs, setJobs]= useState([]);
   useEffect(()=>{
-    fetch(`http://localhost:3000/job-applications/?email=${user.email}`)
-    .then(res=>res.json())
-    .then(data=>{
-        setJobs(data)
-    })
+    if(user && user.email){
+      fetch(`http://localhost:3000/jobs?applicant_email=${user.email}`)
+      .then(res=>res.json())
+      .then(data=>{
+          setJobs(data)
+      })
+    }
   },[user.email])
   
     return (

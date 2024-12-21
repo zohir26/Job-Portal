@@ -26,11 +26,12 @@ const Navbar = () => {
           <Link > <li>{user.email}</li>  </Link>
           <Link to='/addJob'> <li>Add a job</li>  </Link>
           <Link to='/myPostedJobs'> <li>Posted Jobs</li>  </Link>
+          <Link to='/myApplications'> <li>My Applications</li>  </Link>
         </> : <>
 
           <Link to='/login'> <li>Login</li>  </Link>
           <Link to='/register'> <li>Register</li>  </Link>
-          <Link to='/myApplications'> <li>My Applications</li>  </Link>
+
           
         </>
       }
