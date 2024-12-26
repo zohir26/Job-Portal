@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import Navbar from "../../shared/Navbar";
 import Footer from "../../shared/Footer";
+import useAxios from "../../Hooks/useAxios";
 
 
 const MyApplications = () => {
   const {user}= useAuth();
   const [jobs, setJobs]= useState([]);
-  useEffect(()=>{
+  // use the axios hook
+  const axiosSecure = useAxios( );
+  // useEffect(()=>{
     // if(user && user.email){
     //   fetch(`http://localhost:3000/jobs?applicant_email=${user.email}`)
     //   .then(res=>res.json())
@@ -16,10 +19,14 @@ const MyApplications = () => {
     //   })
     // }
 
-    axios.get(`http://localhost:3000/jobs?applicant_email=${user.email}`, {withCredentials:true})
-    .then(res=>setJobs(res.data))
-  },[user.email])
-  
+  //   axios.get(`http://localhost:3000/jobs?applicant_email=${user.email}`, {withCredentials:true})
+  //   .then(res=>setJobs(res.data))
+  // },[user.email])
+
+  // No need to use baseurl and withCredentials as they are declared in hook
+
+  axiosSecure.get(`/jobs?applicant_email=${user.email}`)
+  .then(res=>setJobs(res.data))
     return (
       <>
       <Navbar>  </Navbar>

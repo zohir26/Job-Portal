@@ -1,0 +1,113 @@
+[debug] [2024-12-22T19:10:11.916Z] ----------------------------------------------------------------------
+[debug] [2024-12-22T19:10:11.922Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-12-22T19:10:11.923Z] CLI Version:   13.29.1
+[debug] [2024-12-22T19:10:11.923Z] Platform:      win32
+[debug] [2024-12-22T19:10:11.924Z] Node Version:  v20.15.0
+[debug] [2024-12-22T19:10:11.924Z] Time:          Mon Dec 23 2024 01:10:11 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-12-22T19:10:11.924Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-22T19:10:11.930Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-12-22T19:10:12.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-22T19:10:12.088Z] > authorizing via signed-in user (jahirraihan500@gmail.com)
+[debug] [2024-12-22T19:10:12.089Z] [iam] checking project job-portal-5c055 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-22T19:10:12.090Z] Checked if tokens are valid: false, expires at: 1734809756581
+[debug] [2024-12-22T19:10:12.090Z] Checked if tokens are valid: false, expires at: 1734809756581
+[debug] [2024-12-22T19:10:12.090Z] > refreshing access token with scopes: []
+[debug] [2024-12-22T19:10:12.092Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-22T19:10:12.092Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-22T19:10:23.078Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: getaddrinfo ENOTFOUND firebase-public.firebaseio.com
+[warn] !  Unable to fetch the CLI MOTD and remote config. This is not a fatal error, but may indicate an issue with your network connection. 
+[debug] [2024-12-22T19:10:23.081Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[debug] [2024-12-22T19:10:23.214Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------360328761469713486472129","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-12-22T19:10:23.216Z] [iam] error while checking permissions, command may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-12-22T19:10:23.218Z] Checked if tokens are valid: false, expires at: 1734809756581
+[debug] [2024-12-22T19:10:23.218Z] Checked if tokens are valid: false, expires at: 1734809756581
+[debug] [2024-12-22T19:10:23.218Z] > refreshing access token with scopes: []
+[debug] [2024-12-22T19:10:23.219Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-22T19:10:23.219Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-22T19:10:39.788Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-22T19:10:39.789Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-22T19:10:39.802Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/job-portal-5c055 [none]
+[debug] [2024-12-22T19:10:51.620Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/job-portal-5c055 200
+[debug] [2024-12-22T19:10:51.621Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/job-portal-5c055 {"projectId":"job-portal-5c055","projectNumber":"309690796632","displayName":"Job-Portal","name":"projects/job-portal-5c055","resources":{"hostingSite":"job-portal-5c055"},"state":"ACTIVE","etag":"1_e7703831-5e35-4ed4-8a70-f31f33c4d616"}
+[info] 
+[info] === Deploying to 'job-portal-5c055'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-12-22T19:10:51.630Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:51.631Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:51.631Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions [none]
+[debug] [2024-12-22T19:10:51.631Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-12-22T19:10:54.554Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions 200
+[debug] [2024-12-22T19:10:54.555Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions {"name":"projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[job-portal-5c055]: beginning deploy... 
+[info] i  hosting[job-portal-5c055]: found 7 files in dist 
+[debug] [2024-12-22T19:10:54.577Z] [hosting] uploading with 200 concurrency
+[debug] [2024-12-22T19:10:54.656Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:54.656Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:54.658Z] [hosting] hash cache [ZGlzdA] stored for 7 files
+[debug] [2024-12-22T19:10:54.658Z] [hosting][hash queue][FINAL] {"max":69,"min":3,"avg":19.714285714285715,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":75}
+[debug] [2024-12-22T19:10:54.659Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b:populateFiles [none]
+[debug] [2024-12-22T19:10:54.660Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b:populateFiles {"files":{"/vite.svg":"699a02e0e68a579f687d364bbbe7633161244f35af068220aee37b1b33dfb3c7","/jobs.json":"9a992a49e39321955c94e6d409a3f2de5b260124d100be039bf536d88b1576ff","/index.html":"6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075","/assets/index-DmJbPvrL.css":"c1dc0763cca7947fa27c644ac95e6d5d75bac1149c6eade4616aaedbd16f0e65","/assets/job-banner.jpg-BNKaZr8g.jpg":"dc021a0634274f7fd0b06dd2e9c472daf6428f789c44edb60ec4815d158a4da8","/assets/job-banner-2-zAHuimui.jpg":"5509f90f0241c5731bdfe9f6024b96217dbdfefad1155a3edc5cbd00d6b69fca","/assets/index-Rks5TCPM.js":"67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655"}}
+[debug] [2024-12-22T19:10:55.185Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b:populateFiles 200
+[debug] [2024-12-22T19:10:55.185Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b:populateFiles {"uploadRequiredHashes":["67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655","6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files"}
+[debug] [2024-12-22T19:10:55.186Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:55.186Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:55.186Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:55.187Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:10:55.187Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655 [none]
+[debug] [2024-12-22T19:10:55.187Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655 [stream]
+[debug] [2024-12-22T19:10:55.189Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075 [none]
+[debug] [2024-12-22T19:10:55.189Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075 [stream]
+[debug] [2024-12-22T19:10:55.190Z] [hosting][populate queue][FINAL] {"max":532,"min":532,"avg":532,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":535}
+[debug] [2024-12-22T19:10:55.190Z] [hosting] uploads queued: 2
+[debug] [2024-12-22T19:11:04.147Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075 200
+[debug] [2024-12-22T19:11:04.147Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/6a230ccbb32a23ddc151d54b7ca8caeb6f16e6a71d71464e5b630d401c5b9075 [stream]
+[debug] [2024-12-22T19:11:04.747Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655 200
+[debug] [2024-12-22T19:11:04.748Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/job-portal-5c055/versions/d6d251675192ca3b/files/67da3c2022c6071cb1900f6851028b31716e9f621ca50fd3d9e2dcc1af078655 [stream]
+[debug] [2024-12-22T19:11:04.748Z] [hosting][upload queue][FINAL] {"max":9563,"min":8961,"avg":9262,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":9563}
+[info] +  hosting[job-portal-5c055]: file upload complete 
+[debug] [2024-12-22T19:11:04.749Z] [hosting] deploy completed after 10190ms
+[debug] [2024-12-22T19:11:04.749Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "job-portal-5c055"
+    },
+    "version": "projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b"
+  }
+]
+[info] i  hosting[job-portal-5c055]: finalizing version... 
+[debug] [2024-12-22T19:11:04.752Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:11:04.753Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:11:04.753Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions/d6d251675192ca3b updateMask=status%2Cconfig
+[debug] [2024-12-22T19:11:04.753Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions/d6d251675192ca3b {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-12-22T19:11:19.364Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions/d6d251675192ca3b 200
+[debug] [2024-12-22T19:11:19.365Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/versions/d6d251675192ca3b {"name":"projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-12-22T19:10:53.843725Z","createUser":{"email":"jahirraihan500@gmail.com"},"finalizeTime":"2024-12-22T19:11:16.521293Z","finalizeUser":{"email":"jahirraihan500@gmail.com"}}
+[debug] [2024-12-22T19:11:19.365Z] [hosting] finalized version for job-portal-5c055:[object Object]
+[info] +  hosting[job-portal-5c055]: version finalized 
+[info] i  hosting[job-portal-5c055]: releasing new version... 
+[debug] [2024-12-22T19:11:19.366Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:11:19.366Z] Checked if tokens are valid: true, expires at: 1734898238789
+[debug] [2024-12-22T19:11:19.366Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/channels/live/releases versionName=projects%2F309690796632%2Fsites%2Fjob-portal-5c055%2Fversions%2Fd6d251675192ca3b
+[debug] [2024-12-22T19:11:19.366Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/channels/live/releases {}
+[debug] [2024-12-22T19:11:24.531Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/channels/live/releases 200
+[debug] [2024-12-22T19:11:24.531Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/job-portal-5c055/channels/live/releases {"name":"projects/309690796632/sites/job-portal-5c055/channels/live/releases/1734894679147000","version":{"name":"projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-12-22T19:10:53.843725Z","createUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"},"finalizeTime":"2024-12-22T19:11:16.521293Z","finalizeUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"}},"type":"DEPLOY","releaseTime":"2024-12-22T19:11:19.147Z","releaseUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"}}
+[debug] [2024-12-22T19:11:24.531Z] [hosting] release: {"name":"projects/309690796632/sites/job-portal-5c055/channels/live/releases/1734894679147000","version":{"name":"projects/309690796632/sites/job-portal-5c055/versions/d6d251675192ca3b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-12-22T19:10:53.843725Z","createUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"},"finalizeTime":"2024-12-22T19:11:16.521293Z","finalizeUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"}},"type":"DEPLOY","releaseTime":"2024-12-22T19:11:19.147Z","releaseUser":{"email":"jahirraihan500@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIr0hfKRLfmXYgf71IJr6KwfACeFzZVFq5hSWFCNKYwvFxXbopE"}}
+[info] +  hosting[job-portal-5c055]: release complete 

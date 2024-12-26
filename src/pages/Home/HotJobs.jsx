@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import HotJobsCard from "./HotJobsCard";
+import HotJobsCard from "../Home/HotJobsCard";
+
 
 
 const HotJobs = () => {
@@ -15,6 +16,8 @@ const HotJobs = () => {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 space-y-4">
           {
             jobs.map(job=><HotJobsCard key={job._id} job={job}></HotJobsCard>)
+
+          
           }  
         </div>
     );
