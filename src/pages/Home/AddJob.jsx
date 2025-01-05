@@ -305,8 +305,8 @@ const AddJob = () => {
         const processedData = {
             ...formData,
             salaryRange: {
-                min: formData.salaryMin,
-                max: formData.salaryMax,
+                min: parseInt(formData.salaryMin),
+                max: parseInt(formData.salaryMax),
                 currency: formData.currency
             },
             requirements: formData.requirements.split(',').map(req => req.trim()),
