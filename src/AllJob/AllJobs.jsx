@@ -9,8 +9,10 @@ import sortBy from 'sort-by';
 const AllJobs = () => {
    
    const [sortBySalary, setSortBySalary]= useState(false);
-   const {jobs, loading} = useJobs(sortBySalary);
    
+   const [search, setSearch]= useState("");
+
+   const {jobs, loading} = useJobs(sortBySalary,search);
    if(loading){
     return <Loading></Loading>
    }
@@ -19,13 +21,22 @@ const AllJobs = () => {
    return (
        <>
        <Navbar></Navbar>
-        <div className='container flex justify-center items-center'>
+        <div className='container flex justify-center items-center gap-3'>
             <button onClick= {()=>setSortBySalary(!sortBySalary)}
             // here the sort button will toggle, if the button is clicked then sort and if again clicked the sort will be false. it will toggle the state.
             className={`btn btn-neutral ${sortBySalary && 'btn-success'} `}
             >{
                 sortBySalary == true ? "Sorted By Salary" : "Sort By Salary"
             }</button>
+
+            <input
+             type="text" name="" 
+             className=" border border-lime-300 p-4 w-full max-w-2xl rounded-lg" placeholder='Search job by location' 
+             // hold the search data
+             onKeyUp={(e)=>setSearch(e.target.value)}
+             
+             id="" />
+
         </div>
        <div>
            <h1 className='text-3xl bold text-center py-10'>All jobs {jobs.length}</h1>
