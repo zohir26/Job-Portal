@@ -7,7 +7,7 @@ import auth from '../Firebase/firebase.config';
 const Navbar = () => {
   const { user } = useContext(AuthContext)
   // logout
-  const handleLogout = () => {
+ const handleLogout = () => {
     signOut(auth)
       .then(() => {
         alert("logout Successful")

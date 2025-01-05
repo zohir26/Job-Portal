@@ -20,7 +20,7 @@ const MyPostedJobs = () => {
     return (
         <>
         <Navbar></Navbar>
-        <div className="min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
             <h2>This is my posted jobs: {jobs.length}</h2>
             {
                 jobs.map(job=>    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
