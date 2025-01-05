@@ -20,6 +20,7 @@ const Navbar = () => {
   const links = <>
     <div className='flex gap-8 text-2xl font-semibold'>
       <Link to='/'> <li>Home</li>  </Link>
+      <Link to='/jobs'> <li>All Jobs</li>  </Link>
       {
         user ? <>
           <Link > <li onClick={handleLogout}>Logout</li>  </Link>
